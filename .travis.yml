@@ -8,5 +8,5 @@ install:
   - sudo apt-get install -qq g++-6  
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90  
 script:   
-  - g++ swap.cpp -std=c++17 -o travis_gcc_cpp17  
+  - g++ sample.cpp -std=c++17 -o travis_gcc_cpp17  
   - ./travis_gcc_cpp17 
