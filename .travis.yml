@@ -1,12 +1,12 @@
-1.	language: cpp  
-2.	compiler: gcc  
-3.	dist: trusty  
-4.	before_install:  
-5.	  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test  
-6.	  - sudo apt-get update -qq  
-7.	install:   
-8.	  - sudo apt-get install -qq g++-6  
-9.	  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90  
-10.	script:   
-11.	  - g++ swap.cpp -std=c++17 -o travis_gcc_cpp17  
-12.	  - ./travis_gcc_cpp17 
+language: cpp  
+compiler: gcc  
+dist: trusty  
+before_install:  
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test  
+  - sudo apt-get update -qq  
+install:   
+  - sudo apt-get install -qq g++-6  
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90  
+script:   
+  - g++ swap.cpp -std=c++17 -o travis_gcc_cpp17  
+  - ./travis_gcc_cpp17 
